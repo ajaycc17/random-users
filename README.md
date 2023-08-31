@@ -9,3 +9,5 @@ To run the code in development environment use the following command:
 ```bash
 npm start
 ```
+
+Data is fetched two times in Strict mode, bu tonly in development server. In production, strict mode is preferred and works fine.
