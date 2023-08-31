@@ -39,7 +39,8 @@ function App() {
 
     // load data from api and store in indexeddb (only when indexeddb is empty)
     const loadData = useCallback(async () => {
-        if ((await db.users.count()) === 0) {
+        const count = await db.users.count();
+        if (count === 0) {
             const res = await axios.get(
                 `https://randomuser.me/api/?results=50`
             );
